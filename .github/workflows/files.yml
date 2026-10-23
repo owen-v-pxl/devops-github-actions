@@ -1,0 +1,21 @@
+name: CI
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Create directory
+        run: mkdir wawa
+
+      - name: Create text file
+        run: echo "wawa" > wawa/wawa.txt
+
+      - name: List directory content
+        run: ls wawa
+
+      - name: Show file contents
+        run: cat wawa/wawa.txt
